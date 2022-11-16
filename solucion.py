@@ -89,7 +89,7 @@ def encontrar_orden(diccionario):
     else:
         return "".join(orden)
 
-@timer
+#@timer
 def main():
     casos = int(sys.stdin.readline())  # Lee el número de casos
     for _ in range(casos):
