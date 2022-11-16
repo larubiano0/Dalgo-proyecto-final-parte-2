@@ -1,4 +1,15 @@
 import sys
+import time
+
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print('{:f}'.format(end-start)+'s')
+        return result
+    return wrapper
 
 
 class Grafo:
@@ -78,7 +89,7 @@ def encontrar_orden(diccionario):
     else:
         return "".join(orden)
 
-
+@timer
 def main():
     casos = int(sys.stdin.readline())  # Lee el número de casos
     for _ in range(casos):
