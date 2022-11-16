@@ -104,7 +104,7 @@ def main():
             paginas[n_pagina] = palabras_pagina
 
         # Lista ordenada con todas las palabras en el "diccionario" (flatten)
-        palabras = [j for sub in paginas for j in sub]
+        palabras = [palabra for pagina in paginas for palabra in pagina]
 
         orden = encontrar_orden(palabras)  # Encuentra el orden como un string
         sys.stdout.write(orden + "\n")
