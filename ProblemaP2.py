@@ -89,7 +89,7 @@ def encontrar_orden(diccionario):
     else:
         return "".join(orden)
 
-#@timer
+@timer
 def main():
     casos = int(sys.stdin.readline())  # Lee el número de casos
     for _ in range(casos):
@@ -113,4 +113,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-# python3 solucion.py < P0.in > archivo2.out
+# python3 ProblemaP2.py < P0.in > archivo2.out
